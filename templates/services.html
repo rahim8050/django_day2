@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends 'master.html' %}
+{% block title %}
     <title>Services</title>
-</head>
-<body>
+{% endblock %}
 
-</body>
-</html>
+
+{% block content %}
+    <h2 class="text-center text-danger">Our services</h2>
+    {% for s in services %}
+        <p>{{ s }}</p>
+    {% endfor %}
+    <h3>Ksh {{ price }}</h3>
+    <h3>On Date {{ date }}</h3>
+
+    {% if price > 8000 %}
+        <p>Our best prices in town</p>
+    {% endif %}
+    {% if price > 5000 %}
+        <p>Our best prices in town for December</p>
+        {% else %}
+            <p>Contact us for discounts</p>
+    {% endif %}
+{% endblock %}
