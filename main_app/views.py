@@ -5,7 +5,8 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'home.html')
 
-
+def contact(request):
+    return render(request, 'contact.html')
 def services(request):
     our_services = ["Bush Camps", "Balloon Tours", "Hunting", "Village Visiing", "Yoga"]
     price = 10000
